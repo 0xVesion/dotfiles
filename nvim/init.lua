@@ -1,0 +1,5 @@
+require("config/options")
+require("config/plugins")
+require("config/keymap")
+require("config/lsp")
+require("config/go")

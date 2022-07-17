@@ -1,0 +1,58 @@
+# Taps
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+
+# CLIs
+brew "bash" # To keep bash up to date
+brew "bat" # Better cat
+brew "btop" # Better bat
+brew "cmatrix" # 1337
+brew "exiftool" # For managing photo exif data
+brew "ffmpeg" # For converting audio and video
+brew "git" # To keeep git up to date
+brew "gnupg"
+brew "graphviz" # For graph visualization
+brew "jq" # To manipulate json
+brew "lazygit" # Git tui
+brew "lazydocker" # Docker tui
+brew "mas" # AppStore command-line interface
+brew "neovim" # The superior text editor
+brew "nmap"
+brew "node"
+brew "pure" # Terminal prompt of choice
+brew "trash-cli" # To interact with system trash
+brew "tree"
+brew "watch"
+brew "yq" # To manipulate yaml
+brew "zsh" # The superior shell
+
+# Apps
+cask "adobe-creative-cloud"
+cask "alfred"
+cask "balance-lock" # To keep audio balanced
+cask "brave-browser"
+cask "discord"
+cask "font-fira-code-nerd-font"
+cask "hiddenbar" # To hide items in system menu bar
+cask "iterm2"
+cask "jetbrains-toolbox"
+cask "ledger-live"
+cask "macfuse" # File system extension (required for VeraCrypt)
+cask "minecraft" # A game about mining and crafting
+cask "nextcloud"
+cask "notion"
+cask "onlyoffice"
+cask "protonmail-bridge"
+cask "protonvpn"
+cask "raspberry-pi-imager"
+cask "sequel-ace" # SQL gui
+cask "signal"
+cask "steam"
+cask "telegram"
+cask "tunnelblick" # OpenVpn client
+cask "utm" # Qemu frontend
+cask "veracrypt"
+cask "vlc"
+cask "zulu" # OpenJDK

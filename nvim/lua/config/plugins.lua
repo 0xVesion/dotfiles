@@ -25,4 +25,8 @@ return packer.startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
+
+  -- Fuzzy file search
+  use { "junegunn/fzf", run = "./install --all" }
+  use "junegunn/fzf.vim"
 end)

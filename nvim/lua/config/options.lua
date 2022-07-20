@@ -5,6 +5,8 @@ local options = {
   wrap = false,
   cursorline = true,
   termguicolors = true,
+  path = {"**"},
+  wildignorecase = true,
 }
 
 for k, v in pairs(options) do

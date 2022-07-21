@@ -47,7 +47,7 @@ function loadPurePrompt {
 }
 
 function setupPath {
-    eval "$(brew shellenv)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
     PATH=$PATH:~/go/bin
     PATH=$PATH:~/.pub-cache/bin
 }

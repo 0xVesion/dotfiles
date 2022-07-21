@@ -28,8 +28,10 @@ function initOhMyZsh {
     zstyle ':omz:update' frequency 31
     ENABLE_CORRECTION="true"
     COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-    plugins=(git zsh-z dotenv)
     source $ZSH/oh-my-zsh.sh
+    # disable ZSH auto correction
+    unsetopt correct_all  
+    setopt correct
 }
 
 function loadColorLs {
@@ -44,11 +46,16 @@ function loadPurePrompt {
     prompt pure
 }
 
+function setupPath {
+    eval "$(brew shellenv)"
+    PATH=$PATH:~/go/bin
+    PATH=$PATH:~/.pub-cache/bin
+}
+
+plugins=(git zsh-z dotenv colorize node docker)
 configureZsh
 initOhMyZsh
-eval "$(/opt/homebrew/bin/brew shellenv)"
-PATH=$PATH:~/go/bin
-PATH=$PATH:~/.pub-cache/bin
+setupPath
 loadColorLs
 loadPurePrompt
 
@@ -62,3 +69,7 @@ alias vim=nvim
 alias vi=nvim
 export VISUAL=nvim
 export EDITOR=$VISUAL
+alias lg=lazygit
+alias ld=lazydocker
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

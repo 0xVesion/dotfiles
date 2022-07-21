@@ -47,9 +47,8 @@ function loadPurePrompt {
 configureZsh
 initOhMyZsh
 eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH="$PATH:$HOME/tools/flutter/bin:$HOME/.pub-cache/bin"
-export PATH="$PATH:$HOME/go/bin"
-export PATH="$PATH:/Applications/love.app/Contents/MacOS/"
+PATH=$PATH:~/go/bin
+PATH=$PATH:~/.pub-cache/bin
 loadColorLs
 loadPurePrompt
 

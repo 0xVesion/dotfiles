@@ -4,7 +4,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 
-# CLIs
+# Core
 brew "bash" # To keep bash up to date
 brew "bat" # Better cat
 brew "btop" # Better bat
@@ -17,7 +17,6 @@ brew "graphviz" # For graph visualization
 brew "jq" # To manipulate json
 brew "lazygit" # Git tui
 brew "lazydocker" # Docker tui
-brew "mas" # AppStore command-line interface
 brew "neovim" # The superior text editor
 brew "nmap"
 brew "node"
@@ -27,8 +26,9 @@ brew "tree"
 brew "watch"
 brew "yq" # To manipulate yaml
 brew "zsh" # The superior shell
+brew "go"
 
-# Apps
+# Casks
 cask "adobe-creative-cloud"
 cask "alfred"
 cask "balance-lock" # To keep audio balanced
@@ -55,4 +55,18 @@ cask "tunnelblick" # OpenVpn client
 cask "utm" # Qemu frontend
 cask "veracrypt"
 cask "vlc"
-cask "zulu" # OpenJDK
+cask "flutter"
+cask "robo-3t" # mongodb gui
+cask "rectangle"
+cask "obs"
+cask "parsec"
+cask "joplin"
+cask "1password"
+cask "visual-studio-code"
+cask "docker"
+
+# AppStore apps
+mas "Apple Configurator", id: 1037126344
+mas "Xcode", id: 497799835
+mas "Kindle", id: 405399194
+mas "Keynote", id: 409183694 

@@ -14,10 +14,6 @@ brew bundle
 brew cleanup
 brew doctor
 
-# Install AppStore apps
-mas install 1037126344 # Apple Configurator
-mas install 497799835 # Xcode
-
 # Install oh my zsh if not exists
 if [[ ! -e ~/.oh-my-zsh ]]; then
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

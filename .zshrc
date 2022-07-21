@@ -28,7 +28,6 @@ function initOhMyZsh {
     zstyle ':omz:update' frequency 31
     ENABLE_CORRECTION="true"
     COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-    plugins=(git zsh-z dotenv)
     source $ZSH/oh-my-zsh.sh
 }
 
@@ -44,9 +43,15 @@ function loadPurePrompt {
     prompt pure
 }
 
+eval "$(brew shellenv)"
+plugins=(git zsh-z dotenv colorize node docker zsh-syntax-highlighting)
 configureZsh
 initOhMyZsh
-eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# disable ZSH auto correction
+unsetopt correct_all  
+setopt correct
+
 export PATH="$PATH:$HOME/tools/flutter/bin:$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:/Applications/love.app/Contents/MacOS/"
@@ -63,3 +68,7 @@ alias vim=nvim
 alias vi=nvim
 export VISUAL=nvim
 export EDITOR=$VISUAL
+alias lg=lazygit
+alias ld=lazydocker
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
